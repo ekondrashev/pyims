@@ -58,7 +58,7 @@ Run Test: both files skype_send_message.py and test_skype_send_message.py must b
 ```
 python -m unittest -v test_skype_send_message.py - on Windows
 
-python3 unittest test_skype_send_message.py - on Linux-like 
+python3 test_skype_send_message.py - on Linux-like 
 ```
 
 ### Result of Test on Windows:
