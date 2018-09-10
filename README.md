@@ -58,10 +58,10 @@ Run Test: both files skype_send_message.py and test_skype_send_message.py must b
 ```
 python -m unittest -v test_skype_send_message.py - on Windows
 
-python3 -m unittest -v test_skype_send_message.py - on Linux-like 
+python3 unittest test_skype_send_message.py - on Linux-like 
 ```
 
-### Result of Test:
+### Result of Test on Windows:
 
 ```
 Welcome to 'Skype send message'.
@@ -93,4 +93,62 @@ tearDownClass
 Ran 2 tests in 0.003s
 
 OK
+```
+### Result of Test on Ubuntu:
+
+```
+(py3) nexus@nexus-HP-ProBook-4540s ~ $ python3 test_skype_send_message.py
+Welcome to 'Skype send message'. 
+Type your username of Skype: nexus1214@ukr.net
+Type your password of Skype: xxxxxxxx
+password stored successfully
+password xxxxxxxx
+Type user name of Skype for 1-to-1 conversation: nexus12142
+Sending: 
+Type your message for user of Skype with you want to 1-to-1 conversation: test
+Your message is send
+password None
+setUpClass
+==========
+Set up for [PASSWORD is SET, TEST]
+id: __main__.skype_send_message_test.test_password
+Tear down for [PASSWORD is SET, TEST]
+
+.Set up for [PASSWORD is NOT SET, TEST]
+id: __main__.skype_send_message_test.test_password1
+Tear down for [PASSWORD is NOT SET, TEST]
+
+.==========
+tearDownClass
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.041s
+
+OK
+
+(py3) nexus@nexus-HP-ProBook-4540s ~ $ python3 test_skype_send_message.py
+Welcome to 'Skype send message'. 
+Type your username of Skype: nexus1214@ukr.net
+Type user name of Skype for 1-to-1 conversation: nexus12142
+Sending: 
+Type your message for user of Skype with you want to 1-to-1 conversation: test
+Your message is send
+setUpClass
+==========
+Set up for [PASSWORD is SET, TEST]
+id: __main__.skype_send_message_test.test_password
+Tear down for [PASSWORD is SET, TEST]
+
+.Set up for [PASSWORD is NOT SET, TEST]
+id: __main__.skype_send_message_test.test_password1
+Tear down for [PASSWORD is NOT SET, TEST]
+
+.==========
+tearDownClass
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.029s
+
+OK
+
 ```
