@@ -12,7 +12,6 @@ username = None
 password = None
 
 def main(servicename, username, password):
-    servicename = "Skype"
     username = input("Type your username of Skype: ")
     password = input("Type your password of Skype: ")
     keyring.set_password(servicename, username, password)
