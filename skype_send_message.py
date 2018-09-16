@@ -13,4 +13,4 @@ def set_send_message(username, password, retr, mess):
     message.sendMsg(mess)
     message.getMsgs()
     all_arg = username + ' ' + password + ' ' + retr + ' ' + mess
-    return all_arg.title()
+    return all_arg
