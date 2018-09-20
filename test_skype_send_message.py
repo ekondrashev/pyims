@@ -2,6 +2,7 @@ import unittest
 import skype_send_message
 
 
+
 class skype_send_message_test(unittest.TestCase):
     """skype_send_message tests"""
 
@@ -27,10 +28,12 @@ class skype_send_message_test(unittest.TestCase):
         print("Tear down for [" + self.shortDescription() + "]")
         print("")
 
-    def test_main(self):
+    def test_main_with_setting_password(self):
         """PASSWORD is SET, TEST"""
         print("id: " + self.id())
-        self.assertEqual(skype_send_message.main("servicename", "password"), "password")
+        self.assertEqual(skype_send_message.main('username', 'password'), 'password')
+        #self.assertEqual(skype_send_message.main(username, password), password)  # unresolved reference
+        #print("password deleted: ", keyring.delete_password(servicename, username))
 
     #def test_main(self):
         #"""PASSWORD is NOT SET, TEST"""
@@ -41,4 +44,3 @@ class skype_send_message_test(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-
