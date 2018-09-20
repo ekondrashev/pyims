@@ -31,7 +31,7 @@ class skype_send_message_test(unittest.TestCase):
     def test_main_with_setting_password(self):
         """PASSWORD is SET, TEST"""
         print("id: " + self.id())
-        self.assertEqual(skype_send_message.main('username', 'password'), 'password')
+        self.assertEqual(skype_send_message.main('Skype', 'nexus12141'), 'password')
         #self.assertEqual(skype_send_message.main(username, password), password)  # unresolved reference
         #print("password deleted: ", keyring.delete_password(servicename, username))
 
