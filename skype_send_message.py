@@ -1,4 +1,3 @@
-import sys
 import keyring
 import argparse
 from skpy import Skype
@@ -7,7 +6,8 @@ parent_parser = argparse.ArgumentParser(add_help=False)
 parent_parser.add_argument('--username', action="store")
 parent_parser.add_argument('--password', action="store")
 parent_parser.add_argument('--servicename', action="store")
-def main(argv):
+
+def main(servicename, username):
     print("Welcome to 'Skype send message'. ")
     servicename = "Skype"
     username = input("Type your username of Skype: ")
@@ -29,7 +29,7 @@ def main(argv):
     print("messages: ", message.getMsgs())  # retrieve recent messages
     print("Your message is send")
     print(servicename, username, password)
-    #print("password deleted: ", keyring.delete_password("Skype", username))
+    print("password deleted: ", keyring.delete_password("Skype", username))
     pass
 if __name__ == '__main__':
-    main(sys.argv)
+    main('servicename', 'username')
