@@ -9,9 +9,13 @@ parent_parser.add_argument('--servicename', action="store")
 
 def main(servicename, username):
     print("Welcome to 'Skype send message'. ")
-    servicename = "Skype"
-    username = input("Type your username of Skype: ")
+
+    #servicename = "Skype"
+    #username = input("Type your username of Skype: ")
     password = keyring.get_password(servicename, username) or input("Type your password of Skype: ")
+    #password = keyring.get_password(servicename, username)
+    #password = input("Type your password of Skype: ")
+    #password = ""
     try:
         keyring.set_password(servicename, username,  password)
         print("password stored successfully")
@@ -29,7 +33,11 @@ def main(servicename, username):
     print("messages: ", message.getMsgs())  # retrieve recent messages
     print("Your message is send")
     print(servicename, username, password)
-    print("password deleted: ", keyring.delete_password("Skype", username))
+    #print("password deleted: ", keyring.delete_password("Skype", username))
+    #return str(servicename), str(username), str(password)
+    return str(password)
+
     pass
 if __name__ == '__main__':
     main('servicename', 'username')
+
