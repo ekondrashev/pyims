@@ -28,7 +28,7 @@ class skype_send_message_test(unittest.TestCase):
         print("Tear down for [" + self.shortDescription() + "]")
         print("")
 
-    def test_main_with_setting_password(self):
+    def test_password_from_keyring(self):
         """PASSWORD is SET, TEST"""
         print("id: " + self.id())
         self.assertEqual(skype_send_message.main("Skype", "nexus12141"), "Your Password")
