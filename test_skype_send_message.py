@@ -33,6 +33,8 @@ class SkypeSendTextMessageTest(unittest.TestCase):
     def test_send_text_message(self):
         """SEND MESSAGE is SET, TEST"""
         print("id: " + self.id())
+        # TODO: ek: need to check if message was send from `nexus12142` account, 
+        # so like send mesage and check incoming message box of the recipient
         self.assertEqual(skype_send_message.main("nexus12141", "nexus12142", "HELLO, TEST"), "HELLO, TEST")
 
 
